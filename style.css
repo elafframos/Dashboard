@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --cor1: rgb(255, 255, 255);
+    --letra: black;
+    --navegacao: gray;
+}
+
+.tema-preto{
+    --cor1: rgb(77, 75, 75);
+    --letra: white;
+    --navegacao: white;
+}
+
+body{
+    background-color: var(--cor1);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navegacao);
+    padding: 20px;
+}
+
+nav img{
+    cursor: pointer;
+}
+
+button {
+    display: flex;
+    border-radius: 90px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+section{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: var(--letra);
+}
