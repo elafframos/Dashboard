@@ -1,18 +1,21 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 :root{
     --cor1: rgb(255, 255, 255);
     --letra: black;
     --navegacao: gray;
+    --borda:  black;
 }
 
 .tema-preto{
-    --cor1: rgb(77, 75, 75);
+    --cor1: rgb(0, 0, 0);
     --letra: white;
     --navegacao: white;
+    --borda: white;
 }
 
 body{
@@ -29,6 +32,17 @@ nav{
 
 nav img{
     cursor: pointer;
+    display: none;
+}
+
+.config{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.texto{
+    display: none;
 }
 
 button {
@@ -36,13 +50,45 @@ button {
     border-radius: 90px;
     border: none;
     background: transparent;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
 }
 
+.tarefa{
+    border: 1px solid;
+    height: 100px;
+}
+
+.botao{
+    color: var(--letra);
+    background-color: rgb(32, 151, 32);
+    padding: 20px;
+}
+
+.botao:hover{
+    background-color: rgb(59, 202, 40);
+}
+
 section{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+.secao{
     display: grid;
     justify-content: center;
     align-items: center;
     color: var(--letra);
+}
+
+@media (max-width: 768px){
+    .config, .texto{
+        display: none;
+    }
+    nav img{
+        display: flex;
+        width: 8%;
+    }
 }
