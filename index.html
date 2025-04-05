@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <button id="botao">🌙</button>
 
-        <h1>Dashboard</h1>
+        <h1>Lista de Tarefas</h1>
 
-        <img src="img/hamburger.png" alt="Rahul Kaklotar" width="3%">
+        <div class="config">
+            <p id="p"><b>Tarefas Feitas</b></p> 
+            <p id="p1"><b>Tarefas Pendentes</b></p> 
+            <p id="p2"><b>Configurações</b></p>
+        </div>
+        <img src="img/hamburger.png" alt="Rahul Kaklotar" id="menu">
     </nav>
 
    <section>
-        <div class="receita">
-            Receita: R$ 1000,00
+        <div class="texto" style="color: white;">
+            <button class="x" style="color: red;">x</button> <br>
+            <p class="sobre"><b>Tarefas Feitas</b></p>  <br> <br>
+            <p class="contato"><b>Tarefas Pendentes</b></p>  <br> <br>
+            <p class="settins"><b>Configurações</b></p>
         </div>
-        <div class="produtos">
-            Produto: Café
-        </div>
-        <div class="usuarios">
-            Usuário: João
-        </div>
+
+        <section class="secao"> <br>
+            <h2 style="text-align: center;">Tarefas</h2> <br>
+            <div class="tarefa">O Fazer tarefa</div> <br>
+            <button class="botao">Adicionar uma tarefa</button>
+        </section>
+
    </section>
 
     <script src="script.js"></script>
