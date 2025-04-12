@@ -8,14 +8,12 @@
     --cor1: rgb(255, 255, 255);
     --letra: black;
     --navegacao: gray;
-    --borda:  black;
 }
 
 .tema-preto{
     --cor1: rgb(0, 0, 0);
     --letra: white;
     --navegacao: white;
-    --borda: white;
 }
 
 body{
@@ -29,6 +27,17 @@ nav{
     background-color: var(--navegacao);
     padding: 20px;
 }
+
+.nav-centro {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-centro h1 {
+    margin: 0;
+}
+
 
 nav img{
     cursor: pointer;
@@ -56,13 +65,16 @@ button {
 
 .tarefa{
     border: 1px solid;
+    width: 100%;
     height: 100px;
+    top: 30px;
 }
 
 .botao{
     color: var(--letra);
     background-color: rgb(32, 151, 32);
-    padding: 20px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .botao:hover{
@@ -81,6 +93,15 @@ section{
     justify-content: center;
     align-items: center;
     color: var(--letra);
+    border-radius: 8px;
+}
+
+.pergunta {
+    display: none;
+}
+
+.pergunta p{
+    top: 0;
 }
 
 @media (max-width: 768px){
@@ -90,5 +111,76 @@ section{
     nav img{
         display: flex;
         width: 8%;
+    }
+}
+
+/* Estilos do JavasScript */
+
+.fazer-tarefa {
+    position: relative;
+    height: 100vh; 
+
+    .pergunta {
+        display: block;
+        background: rgba(120, 71, 255, 0.788);
+        padding: 50px;
+        font-size: 20px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 8px;
+    }
+    .pergunta p{
+        text-align: center;
+        color: aliceblue;
+    }
+}
+
+.hamburger{
+    .texto{
+        display: block;
+        background: rgb(46, 63, 110);
+        padding: 30px;
+        border-radius: 8px;
+        height: 100%;
+        width: 23%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .x{
+        right: 15px;
+        position: absolute;
+    }
+    .texto p{
+        cursor: pointer;
+    }
+    .menu{
+        display: none;
+    }
+    .config{
+        display: none;
+    }
+}
+
+.salvar{
+    .salvar{
+        display: flex;
+        justify-content: center;
+        background: rgb(0, 255, 55);
+        border-radius: 8px;
+        padding: 9px;
+        margin-left: 70px;
+    }
+    .salvar:hover{
+        background-color: rgb(3, 190, 3);
+    }
+}
+
+.area-texto{
+    .texto-tarefa{
+        padding: 30px;
+        gap: 10px;
     }
 }
